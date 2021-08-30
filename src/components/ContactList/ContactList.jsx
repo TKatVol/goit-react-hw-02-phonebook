@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FcPhoneAndroid } from "react-icons/fc";
+
 import s from '../ContactList/ContactList.module.css';
 
 const ContactList = ({ contactsList, onDeleteContact }) => (

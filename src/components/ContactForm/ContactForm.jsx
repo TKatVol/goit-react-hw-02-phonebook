@@ -6,7 +6,7 @@ class ContactForm extends Component{
     state = {
         name: '',
         number: '',
-    }
+    };
 
     handleSubmit = event => {
         event.preventDefault();
@@ -19,8 +19,7 @@ class ContactForm extends Component{
     resetForm = () => {
         this.setState({ name: '' });
         this.setState({ number: '' });
-    }
-        
+    };        
 
     handleChange = event => {
         const { value, name } = event.currentTarget;
@@ -38,8 +37,7 @@ class ContactForm extends Component{
                 required
                 autoComplete='off'
                 onChange={this.handleChange}
-                className={s.input}
-            ></input>
+                className={s.input} />
           
             <label className={s.label}> Number </label>
             <input type='tel'
@@ -49,14 +47,12 @@ class ContactForm extends Component{
                 required
                 autoComplete='off'
                 onChange={this.handleChange}
-                className={s.input}
-            ></input>
+                className={s.input} />
       
             <button type='submit' className={s.button}>Add contact</button>
         </form>
         )
     }
-    
 }
 
 export default ContactForm;

@@ -36,7 +36,7 @@ class App extends Component {
     } else {
       this.setState(prevState => (
         { contacts: [...prevState.contacts, contact] }
-      ))
+      ));
     };
   };
 
@@ -54,8 +54,8 @@ class App extends Component {
   deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId)
-    }))
-  }
+    }));
+  };
 
   render() {
     const visibleContacts = this.findContactByName();

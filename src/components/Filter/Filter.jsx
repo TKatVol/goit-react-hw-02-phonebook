@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import s from '../Filter/Filter.module.css';
 
 const Filter = ({ value, onChange }) => (
@@ -9,7 +10,7 @@ const Filter = ({ value, onChange }) => (
           value={value}
           autoComplete='off'
           onChange={onChange}
-          className={s.input}></input>
+          className={s.input} />
     </div>
 )
 
