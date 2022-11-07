@@ -1,15 +1,5 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const StyledLabel = styled.label`
-    display: inline-block;
-    margin-bottom: 10px;
-    font-weight: 600;
-`;
-
-const StyledInput = styled.input`
-    margin-bottom: 20px;
-`;
+import { StyledLabel,  StyledInput} from "../Filter/Filter.styled";
 
 export const Filter = ({ value, onChange }) => {
     return (

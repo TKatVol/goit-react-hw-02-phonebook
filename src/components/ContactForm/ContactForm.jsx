@@ -1,31 +1,8 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledForm = styled(Form)`
-    padding: 10px;
-    display: grid;
-    justify-items: start;
-    border: 2px solid #073b63;
-`;
-
-const StyledLabel = styled.label`
-    margin-bottom: 10px;
-    font-weight: 600;
-`;
-
-const StyledInput = styled(Field)`
-    margin-bottom: 20px;
-`;
-
-const StyledButton = styled.button`
-    padding: 8px;
-    font-weight: 600;
-    background-color: #2d92e0;
-    border: none;
-    cursor: pointer;
-`;
+import { StyledForm, StyledLabel, StyledInput, StyledButton } from "../ContactForm/ContactForm.styled";
 
 const schema = yup.object({
     name: yup.string()
@@ -53,7 +30,7 @@ export const ContactForm = ({ onSubmit }) => {
                     <ErrorMessage name="name" />
 
                     <StyledLabel htmlFor="number">Number</StyledLabel>
-                        <StyledInput type="tel"name="number" />
+                        <StyledInput type="tel" name="number" />
                     <ErrorMessage name="number" />
 
                     <StyledButton type="submit">Add contact</StyledButton>

@@ -1,27 +1,10 @@
 import React from "react";
-import styled from 'styled-components';
 import { nanoid }  from "nanoid";
 
-import { ContactForm } from "../components/ContactForm";
-import { Filter } from "../components/Filter";
-import { ContactList } from "../components/ContactList";
-
-const StyledContainer = styled.div`
-  width: 320px;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #e9eff5;
-`;
-
-const StyledTitleH1 = styled.h1`
-  margin: 0;
-  padding: 10px;
-`;
-
-const StyledTitleH2 = styled.h2`
-  margin: 0;
-  padding: 10px;
-`;
+import { ContactForm } from "./ContactForm/ContactForm";
+import { Filter } from "./Filter/Filter";
+import { ContactList } from "./ContactList/ContactList";
+import { StyledContainer, StyledTitleH1, StyledTitleH2 } from "../components/App.styled";
 
 export class App extends React.Component {
   state = {
@@ -49,12 +32,12 @@ export class App extends React.Component {
     if (findSameName) {
       alert(`${name} is already in contacts`);
       return;
-    } else {
-      this.setState(prevState => ({
+    }
+
+    this.setState(prevState => ({
         contacts: [...prevState.contacts, contact]
       }));
       resetForm();
-    };
   };
 
   changeFilter = event => {
